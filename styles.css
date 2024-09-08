@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 20px;
+  font-family: Trebuchet MS, "sans-serif";
+}
+
+.avatar {
+  width: 150px;
+}
+
+.top-row {
+  margin: 0 auto;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  width: 480px;
+  background-color: #c96460; /* Adjust color if needed */
+}
+/* Wobble Horizontal */
+@keyframes wobble-horizontal {
+  16.65% {
+    transform: translateX(8px);
+  }
+
+  33.3% {
+    transform: translateX(-6px);
+  }
+
+  49.95% {
+    transform: translateX(4px);
+  }
+
+  66.6% {
+    transform: translateX(-2px);
+  }
+
+  83.25% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cyf {
+  display: inline-block;
+
+  &:hover {
+    animation-name: wobble-horizontal;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  margin: 0 auto;
+  width: 500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Align children in a row */
+  justify-content: space-around; /* Space items evenly */
+  text-align: center;
+  background: #f0ecec;
+  color: #2b2839;
+}
+
+.image-card {
+  /* padding: 10px; */
+  border: 1px dotted blue;
+  border: 5px solid white;
+}
+.image {
+  overflow: hidden;
+}
+.image img {
+  transition: all 0.4s;
+}
+.image img:hover {
+  transform: scale(1.1);
+}
+
+.details {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: left;
+  /* border: 1px dotted blue; */
+  width: 300px;
+}
+
+.title {
+  font-weight: lighter;
+  padding: 10px 0;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.title p:first-child {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.title p:nth-child(2) {
+  font-weight: lighter;
+  line-height: 0.3;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.about h4 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.about p {
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 2;
+  margin-bottom: 4px;
+}
+
+.social {
+  display: flex;
+  justify-content: end;
+}
+.social img {
+  width: 22px;
+}
+
+/*
+  Stretch goals:
+  Find other ways you can personalize 
+  the design of your business card, e.g.:
+  - change the border(s)
+  - add border radius
+  - shuffle the layout
+  - shadows        🤯
+  - hover effects  🤯🤯
+  - animations     🤯🤯🤯
+  */
+
+/*
+  Final challenge:
+  Download the code to your local computer and place it
+  in a folder called "business-card"
+  */
